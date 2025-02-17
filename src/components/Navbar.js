@@ -4,7 +4,7 @@ import '../App.css';
 const Navbar = () => {
   return (
     <div className='navbar'>
-        <h1>Placeholder Text</h1>
+        <h1>Team Watch &#9917;</h1>
     </div>
   )
 }

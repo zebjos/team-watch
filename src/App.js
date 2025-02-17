@@ -5,12 +5,11 @@ import Content from './components/Content';
 import Fixtures from './components/Fixtures';
 
 function App() {
-  const teamIds = [];
 
   return (
     <div className="App">
       <Navbar/>
-      <Fixtures teamIds={teamIds}/>
+      <Fixtures/>
       <Content/>
       <Footer/>
     </div>

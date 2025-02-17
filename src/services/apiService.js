@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-// Use the Express proxy instead of CORS-Anywhere
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api', // Points to your Express proxy
+  baseURL: 'http://localhost:5000/api', // Points to the Express proxy
 });
 
 export const getTeamMatches = async (teamId) => {
@@ -14,3 +13,4 @@ export const getTeamMatches = async (teamId) => {
     return [];
   }
 };
+

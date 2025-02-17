@@ -1,0 +1,32 @@
+.content-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .team-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .team-section h3 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .team-section ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .team-section li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .team-section li:last-child {
+    border-bottom: none;
+  }
+  

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getTeamMatches } from '../services/apiService';
 import '../Content.css';
 
-// Define team names and IDs
+// Define team names and IDs, maybe be able to choose ur own teams, input name and fetch with corresponding Id
 const teams = [
   { id: 66, name: "Manchester United" },
   { id: 58, name: "Aston Villa" },
@@ -40,17 +40,20 @@ const Content = () => {
           {teams.map((team) => (
             <div key={team.id} className='team-section'>
               <h3>{team.name}</h3>
-              {fixtures[team.id]?.length > 0 ? (
-                <ul>
-                  {fixtures[team.id].map((match) => (
-                    <li key={match.id}>
-                      {new Date(match.utcDate).toLocaleString()} - {match.homeTeam.name} vs {match.awayTeam.name}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p>No upcoming matches found for {team.name}.</p>
-              )}
+              <div className="fixtures-scroll-container">
+                {fixtures[team.id]?.length > 0 ? (
+                  <div className="fixtures-list">
+                    {fixtures[team.id].map((match) => (
+                      <div key={match.id} className="fixture-box">
+                        <p className="fixture-time">{new Date(match.utcDate).toLocaleString()}</p>
+                        <p className="fixture-teams">{match.homeTeam.name} <br></br> VS <br></br> {match.awayTeam.name}</p>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p>No upcoming matches found for {team.name}.</p>
+                )}
+              </div>
             </div>
           ))}
         </>
@@ -60,3 +63,4 @@ const Content = () => {
 };
 
 export default Content;
+

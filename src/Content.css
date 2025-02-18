@@ -1,32 +1,56 @@
 .content-container {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .team-section {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-  }
-  
-  .team-section h3 {
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .team-section ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .team-section li {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .team-section li:last-child {
-    border-bottom: none;
-  }
-  
+  padding: 20px;
+  text-align: center;
+}
+
+.team-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-section h3 {
+  color: rgb(95, 231, 95);
+  margin-bottom: 10px;
+}
+
+.fixtures-scroll-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+.fixtures-list {
+  display: flex;
+  gap: 10px;
+}
+
+.fixture-box {
+  display: inline-block;
+  background-color: white;
+  background-image: linear-gradient(to bottom left, rgba(95, 231, 95, 0.5), green);
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  min-width: 210px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.fixture-box:hover {
+  transform: scale(1.05);
+}
+
+.fixture-time {
+  font-weight: bold;
+  color: white;
+}
+
+/* ✅ Style fixture teams */
+.fixture-teams {
+  font-size: 14px;
+  color: white;
+}
